@@ -5,10 +5,12 @@
 
 ### R9	A link (URL) to your deployed app:
 Heroku: https://botanicmarket.herokuapp.com/
-<br>
+
 ### R10	A link to your GitHub repository:
 GitHub: <https://github.com/OrangeKami/BontanicMarket>
-<br>
+
+Github: Original <https://github.com/OrangeKami/Chen_Zhang_T2A2_app>
+
 ## R7 R8 Problem overview:
 
 The problem I'm trying to solve is to create a marketplace platform for buying and selling plants and related products.
@@ -72,7 +74,6 @@ Target audience are anyone with a smartphone, tablet, or desktop device connecte
 * DevOps: Git, GitHub, VS Code, Webpacker, Bundle, Yarn and Balsamiq
 <br>
 ## R12	User stories for your app:
-As a user when you singed in, you can buy and sell plants items on market. we will discuuse this into two parts:
 
 ***As a Seller***
 
