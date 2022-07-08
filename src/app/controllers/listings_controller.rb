@@ -69,6 +69,15 @@ class ListingsController < ApplicationController
     end
   end
 
+  def search
+    if params[:search].blank?
+      redirect_to listings_path and return
+    else
+      @parameter = params[:search].downcase
+      @results = Listing.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
+    end
+  end
+
    def add_to_watchlist
     id = params[:id].to_i
     session[:watchlist] << id unless session[:watchlist].include?(id)
