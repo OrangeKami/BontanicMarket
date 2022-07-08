@@ -1,0 +1,22 @@
+<section class="py-5 text-center container">
+  <div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'pic6.jpg' %>);">
+    <div class="container">
+     <div class="col-md-6 text-center">
+      <h1>Botanic Market</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit lorem eget feugiat pharetra. Praesent nulla urna, blandit ac malesuada a, dapibus vitae nisi. Suspendisse.</p>
+     
+        <div class="search-form-control form-group">
+          <%= render "/layouts/shared/search" %>
+          <a href="<%= listings_path %>" class="btn btn-success my-2">Browse Market</a>
+        </div>
+
+     </div>
+    </div>
+  </div>
+</section>
+
+<hr class="dropdown-divider">
+<div class="mt-5 mb-5">
+  <h2 class="text-center">Shop by Category</h2>
+  <%= render "layouts/shared/homepage_cards" %>
+</div>

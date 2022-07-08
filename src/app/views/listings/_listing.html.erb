@@ -1,0 +1,28 @@
+<div class="row gutters-sm">
+<%= render "layouts/shared/listinguser_card" %>
+  <%= render "listings/shared/listing_details" %>
+  <div class="table-responsive"> 
+  <table class="table align-middle mb-0 bg-white">
+    <h4 class="text-center">All <Strong style="color: green;"><%= @listing.user.username %></Strong> Listing</h4><br>
+    <thead class="bg-light">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @listing.user.listings.each do |listing| %>
+      <tr>
+        <%= render partial: "/layouts/shared/table", locals: { listing: listing } %>
+        <td> 
+          <%= link_to "Details", listing_path(listing), class: "btn btn-outline-success" %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>   
+</div>

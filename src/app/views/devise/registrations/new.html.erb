@@ -1,0 +1,22 @@
+
+<section class="form-auth text-center">
+  
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <h1 class="h3 mb-3 font-weight-normal">Please Sign Up</h1>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <%= f.text_field :username, autofocus: true, class: "form-control", placeholder: "Username" %>
+    <%= f.email_field :email, autocomplete: "email", class: "form-control", placeholder: "Email Address" %>
+   
+    <%= f.password_field :password, autocomplete: "password", class: "form-control", placeholder: "Password (6 characters minimum)" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Comfirm your Password" %>
+    
+    <%= f.label :"Upload your Avatar" %>
+    <%= f.file_field :avatar, class: "form-control" %>
+    <br>
+    <%= f.submit "Sign Up", class: "btn btn-success text-center" %> 
+     <p class="mt-5 mb-3 text-muted">© 2022</p>
+  <% end %>
+  <br>
+  <%= render "devise/shared/links" %>
+</section>

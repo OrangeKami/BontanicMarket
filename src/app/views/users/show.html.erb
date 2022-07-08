@@ -1,0 +1,33 @@
+<section class="py-5 text-center container">
+  <div class="row gutters-sm"> 
+  <%= render "layouts/shared/user_card" %> 
+    <div class="col-md-8">  
+      <div class="card-body">         
+        <div class="table-reponsive">         
+        <table class="table table align-middle mb-0 bg-white">
+        <br><h4 class="text-center">My Listings</h4><br>
+        <thead class="bg-light">
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% current_user.listings.each do |listing| %>
+        <tr>
+         <%= render partial: "/layouts/shared/table", locals: { listing: listing } %>
+        <td>  
+          <%= link_to "Edit", edit_listing_path(listing), class: "btn btn-outline-success" %>      
+        </td>
+        </tr>
+        <% end %>
+        </tbody>
+        </table>            
+        </div>
+      </div>    
+    </div>   
+  </div>  
+</section>
