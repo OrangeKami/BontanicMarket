@@ -31,7 +31,7 @@ This two-sided marketplace web application allows signed in users to post up pla
 | listings | Once a user has logged in, they are able to create a new  listing by inserting the required information about the listing, and uploading an image is optional. If they do not upload an image, a default image will be added on.  Listings can be updated or edited but only by the person that created the listing and that person must be logged in to see the edit or delete options of the listing. Once a user has logged out, they will still see all listings. |
 | Messages | Buyers and sellers can message each other regarding a listing, and their messages are shown along with the time and name of the person sending the message.  |
 | Watchlist or shopping cart | A user who has logged in can place an item in their whatchlist. They can update the list.|
-| Search | Anyone can search for an item without having to log in first. The search bar is shown on every page of the app, and allows users to enter keywords which will search through the title and description of listings. |
+| Search | Anyone can search for an item without having to log in first. The search bar is shown on every page of the app, and allows users to enter keywords which will search through the name of listings. |
 | Admin| Admin account can access listing items to edit and delet them. And also can see all the users in the market and choose to delete them or not. |
 
 

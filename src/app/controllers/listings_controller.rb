@@ -18,6 +18,7 @@ class ListingsController < ApplicationController
     end   
   end
 
+  # GET /listings/1 or /listings/1.json
   def show
   end
 
@@ -66,6 +67,16 @@ class ListingsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to listings_url, notice: "Listing was successfully destroyed." }
       format.json { head :no_content }
+    end
+  end
+  # simply database search
+  def search
+    if params[:search].blank?
+      redirect_to listings_path and return
+    else 
+      # downcase to make sure letter is no sensitive
+      @parameter = params[:search].downcase
+      @results = Listing.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
     end
   end
 
